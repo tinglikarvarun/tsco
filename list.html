@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f17508;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ffdb58;
+        }
+
+        #search {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Search for items">
+    <table>
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th>Size</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Degcha</td>
+                <td><input type="text" value="" name="degchaS"></td>
+                <td><input type="text" value="" name="degchaQ"></td>
+            </tr>
+            <tr>
+                <td>Bogona</td>
+                <td><input type="text" value="" name="bogonaS"></td>
+                <td><input type="text" value="" name="bogonaQ"></td>
+            </tr>
+            <tr>
+                <td>Lagan</td>
+                <td><input type="text" value="" ></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Tent</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Chairs</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Chowki</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Pandal</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>White Tent</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Sidewalls</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>White Sidewalls</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Screen Parda</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Frames</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Carpet</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Green Mat</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Single Stove</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Double Stove</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Kadai</td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" value=""></td>
+            </tr>
+            
+            
+            
+            
+            
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById("search").addEventListener("input", function() {
+            let searchText = this.value.toLowerCase();
+            let table = document.querySelector("table");
+            let rows = table.querySelectorAll("tbody tr");
+
+            rows.forEach(function(row) {
+                let item = row.cells[0].textContent.toLowerCase();
+                if (item.includes(searchText)) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

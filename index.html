@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIRUMALA SUPPLYING COMPANY</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 00px;
+            background: linear-gradient(to right,rgb(147, 147, 204) ,white,white);
+        }
+
+        .name{
+            text-align: center;
+            color: #f17508;
+            text-shadow: 3px;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-color: #f17508;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        
+
+        .nav-right {
+            background-color: #d4d4e0;
+            text-align: right;
+            padding: 10px 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #137831;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+        }
+
+        .rectangular-button {
+            width: auto;
+            padding: 30px 50px;
+            font-size: 20px;
+            background-color: #20db23;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin: 30px;
+        }
+
+        .rectangular-button:hover {
+            background-color: #14ce14;
+            color: #fff;
+        }
+
+        .image {
+            max-width: 45%;
+        }
+
+        footer {
+            background-color: #3a3333;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="name">
+        <h1>TIRUMALA SUPPLYING COMPANY</h1>
+    </nav>
+
+    <div class="nav-right">
+        <ul>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="https://www.google.com/maps/place/Tirumala+Supplying+Company/@17.3447633,78.5120375,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb987c0f383e13:0xf0457f29e7edb183!8m2!3d17.3447582!4d78.5146124!16s%2Fg%2F11bw1zqjlc?authuser=0&entry=ttu">MAP</a></li>
+            <li><a href="#">ABOUT US</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div>
+            <input type="button" class="rectangular-button" name="order" value="Place Order" onclick="navigateToOrder()">
+            <input type="button" class="rectangular-button" name="update" value="Update Order">
+            <input type="button" class="rectangular-button" name="bill" value="Bill">
+        </div>
+        <img src="balaji.jpg" class="image" width="500px" height="500px">
+    </div>
+
+    <footer>
+        &copy;2023 Tirumala Supplying Company| Designed by Rajesh Tinglikar
+    </footer>
+
+    <script>
+        function navigateToOrder() {
+            window.location.href = "order.html";
+        }
+    </script>
+</body>
+</html>
